@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sajjan Sorol Simple</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #ffffff;
+      color: #222;
+      line-height: 1.6;
+      background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f?auto=format&fit=crop&w=1470&q=80');
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1470&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .logo {
+      color: #007bff;
+      font-weight: bold;
+      font-size: 1.8rem;
+      background-color: yellow;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    .signup-btn {
+      background-color: #6c63ff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .signup-btn:hover {
+      background-color: #574fd6;
+      transform: scale(1.1);
+    }
+    .banner {
+      text-align: center;
+      padding: 4rem 2rem;
+      background-image: url('https://images.unsplash.com/photo-1581091012184-7a4f88e2f368?auto=format&fit=crop&w=1470&q=80');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+    .primary-btn {
+      margin-top: 1rem;
+      background-color: #6c63ff;
+      color: white;
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+    .primary-btn:hover {
+      background-color: #f5b400;
+      transform: scale(1.05);
+      color: #000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    .moving-btn {
+      animation: slide 2s ease-in-out infinite alternate;
+      position: relative;
+    }
+    @keyframes slide {
+      0% { left: 0; transform: translateX(0); }
+      100% { left: 20px; transform: translateX(20px); }
+    }
+    .action, .contact {
+      display: flex;
+      justify-content: space-between;
+      padding: 3rem 2rem;
+      align-items: center;
+      gap: 2rem;
+    }
+    .action .right img {
+      width: 100%;
+      max-width: 300px;
+    }
+    .productive {
+      padding: 3rem 2rem;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+    .productive .stats {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+    .contact .right form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .contact input, .contact textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #f4f4f4;
+    }
+    .footer-content nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+    }
+    .feedback {
+      padding: 3rem 2rem;
+      background-color: #ffffff;
+    }
+    .reviews {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .review {
+      background-color: #f4f4f4;
+      padding: 1rem;
+      border-radius: 8px;
+      width: 250px;
+      text-align: center;
+    }
+    .review img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-top: 10px;
+    }
+    .button-animation-section {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .animated-button.hand-tap {
+      position: relative;
+      animation: slide 2s ease-in-out infinite alternate;
+      background-color: #f5b400;
+      color: #000;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+    .animated-button.hand-tap:hover {
+      background-color: #ffc107;
+      color: #222;
+      transform: scale(1.05);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    .animated-button.hand-tap::after {
+      content: "\1F91A";
+      position: absolute;
+      right: -1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.2rem;
+      animation: tap-hand 1s infinite ease-in-out;
+    }
+    @keyframes tap-hand {
+      0%, 100% { transform: translateY(-50%) scale(1); }
+      50% { transform: translateY(-50%) scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">LOGO</div>
+    <button class="signup-btn">Sign Up</button>
+  </header>
+
+  <section class="banner">
+    <h1>Cool Dark UI Template for Webflow Agencies!</h1>
+    <button class="primary-btn moving-btn">Stay Focused</button>
+  </section>
+
+  <section class="action">
+    <div class="left">
+      <h2>See it in Action</h2>
+      <p>Explore the live preview and imagine your brand in this bold new look.</p>
+      <button class="primary-btn">Launch Live Preview</button>
+    </div>
+    <div class="right">
+      <img src="https://via.placeholder.com/300" alt="Preview Image">
+    </div>
+  </section>
+
+  <section class="productive">
+    <h2>Joined Thousands of Productive Users</h2>
+    <div class="stats">
+      <div><strong>50K</strong><p>Active Users</p></div>
+      <div><strong>2M+</strong><p>Focus Sessions</p></div>
+      <div><strong>95%</strong><p>Satisfaction Rate</p></div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="left">
+      <h2>Let's Get in Touch</h2>
+    </div>
+    <div class="right">
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="example@email.com">
+        <label>Name</label>
+        <input type="text" placeholder="Full name">
+        <label>Message</label>
+        <textarea placeholder="Write your message..."></textarea>
+        <button class="primary-btn">Get in Touch</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+      <h2 class="logo">LOGO</h2>
+      <p>Ready to elevate your online presence?</p>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">How it Works</a>
+        <a href="#">Services</a>
+      </nav>
+    </div>
+  </footer>
+
+  <section class="feedback">
+    <h2>What our users say</h2>
+    <div class="reviews">
+      <div class="review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.</p>
+        <img src="https://via.placeholder.com/50" alt="Reviewer">
+        <small>Reviewer name | Date</small>
+      </div>
+      <div class="review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.</p>
+        <img src="https://via.placeholder.com/50" alt="Reviewer">
+        <small>Reviewer name | Date</small>
+      </div>
+      <div class="review">
+        <p>⭐⭐⭐⭐⭐</p>
+        <h3>Loved by Designers</h3>
+        <p>This template instantly leveled up our presence.</p>
+        <img src="https://via.placeholder.com/50" alt="Reviewer">
+        <small>Reviewer name | Date</small>
+      </div>
+    </div>
+  </section>
+
+  <section class="button-animation-section">
+    <button class="animated-button hand-tap">Button</button>
+  </section>
+</body>
+</html>
